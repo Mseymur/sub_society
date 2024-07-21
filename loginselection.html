@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub-Society Login Screen</title>
+    <link rel="stylesheet" href="loginselection.css">
+</head>
+<body>
+    <div class="background">
+        <video id="main-video" class="video" autoplay muted loop>
+            <source src="Video/videologin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <div class="content">
+                <div class="text-container">
+                    <div class="welcome-text">[Sub-Society]</div>
+                    <div class="login-text">Log in or sign up to your account to access exclusive and personalized content</div>
+                </div>
+                <div class="button-container">
+                    <button id="login-button" class="login-button">[Log in]</button>
+                    <button class="signup-button">[Sign up]</button>
+                </div>
+                <div class="social-login">
+                    <a href="#" class="social-icon">
+                        <img src="logos/google.svg" alt="Google">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="logos/apple.svg" alt="Apple">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="logos/facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+                <div class="guest-login">
+                    <a href="#">Continue as guest</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('login-button').addEventListener('click', function() {
+            window.location.href = 'login.html'; // Replace 'newpage.html' with the path to your new HTML file
+        });
+    </script>
+</body>
+</html>

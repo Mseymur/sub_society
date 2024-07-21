@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro:wght@590&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: black;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.content {
+    width: calc(100% - 32px);
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.text-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.welcome-text {
+    text-align: left;
+    color: white;
+    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+    line-height: 28.80px;
+    word-wrap: break-word;
+}
+
+.menu {
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 120% auto;  /* Center the menu horizontally */
+    margin-bottom: 0px; /* Space above the start button */
+    animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-30%);
+    }
+}
+
+.menu-item {
+    color: white;
+    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+}
+
+.start-button {
+    width: calc(100% - 8px); /* Full width with 16px padding on each side */
+    height: 62px;
+    background: #FAFAF9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+    margin-top: auto; /* Pushes the start button to the bottom */
+    margin-bottom: 80px; /* Space from the bottom */
+}
